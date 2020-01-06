@@ -1,11 +1,15 @@
 vi:
   layouts:
     application:
-      title: " | Ruby on Rails Tutorial Sample App"
+      title: Ruby on Rails Tutorial Sample App
 
   static_pages:
     home:
-      title: "Home"
+      en: "Tiếng Anh"
+      vi: "Tiếng Việt"
       header: "Sample App"
       home: "Đây là trang chủ của trang web"
       link_tutorial: "Hướng dẫn làm ứng dụng Ruby On Rails."
+  application_helper:
+    full_title:
+      title: "Ruby on Rails Tutorial Sample App"
