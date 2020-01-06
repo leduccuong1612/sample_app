@@ -1,0 +1,10 @@
+<% provide:title, t(".title") %>
+
+<%= link_to "English", locale:"en" %>
+<%= link_to "Vietnamese", locale:"vi" %>
+
+<h1><%= t ".header" %></h1>
+<p>
+  <%= t ".home" %>
+  <%= link_to t(".link_tutorial"), Settings.link_erb.main %>
+</p>
