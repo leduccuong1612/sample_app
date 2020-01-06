@@ -3,7 +3,8 @@ en:
     application:
       title: "Ruby on Rails Tutorial Sample App"
     footer:
-      rails: "Ruby on Rails Tutorial"
+      rails: "The Ruby on Rails Tutorial"
+      by: "by"
       author: "Michael Hartl"
       about: "About"
       contact: "Contact"

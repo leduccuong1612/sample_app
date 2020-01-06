@@ -1,4 +1,4 @@
-link_erb:
+link:
   main: "https://www.railstutorial.org/"
   learnenough: "https://www.learnenough.com/"
   book: "https://www.railstutorial.org/book"
@@ -7,3 +7,8 @@ link_erb:
   screencast: "https://screencasts.railstutorial.org/"
   rails: "https://rubyonrails.org"
   author: "https//www.michaelhartl.com"
+validate:
+  name_length: 50
+  email_length: 255
+  password_min_length: 6
+  regex_email: //\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i/
