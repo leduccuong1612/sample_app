@@ -1,0 +1,8 @@
+link_erb:
+  main: "https://www.railstutorial.org/"
+  learnenough: "https://www.learnenough.com/"
+  book: "https://www.railstutorial.org/book"
+  help: "https://www.railstutorial.org/help"
+  contact: "https://www.railstutorial.org/contact"
+  screencast: "https://screencasts.railstutorial.org/"
+  rails: "https://rubyonrails.org"

@@ -1,0 +1,12 @@
+<% provide:title, t(".title") %>
+
+<h1><%= t ".header" %></h1>
+<p>
+  <%= t ".help_rails" %>
+  <%= link_to t(".link_help"), Settings.link_erb.help %>
+  <%= t ".help_app" %>
+  <%= link_to  Settings.link_erb.book do %>
+    <em><%= t ".link_rails" %></em>
+    <%= t ".link_book" %>
+  <% end %>
+</p>

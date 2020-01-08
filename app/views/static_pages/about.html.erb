@@ -1,0 +1,18 @@
+<% provide:title, t(".title") %>
+
+<h1><%= t ".header" %></h1>
+<p>
+  <%= t ".open" %>
+  <%= link_to Settings.link_erb.main do %>
+    <em><%= t ".link_rails" %></em>
+  <% end %>
+  <%= t ".part" %>
+  <%= link_to t(".link_learn"), Settings.link_erb.learnenough %>
+  <%= t ".family" %>
+  <%= link_to t(".book"), Settings.link_erb.book %>
+  <%= t ".and" %>
+  <%= link_to t(".link_screencast"), Settings.link_erb.screencast %>
+  <%= t ".teach" %>
+  <%= link_to t(".rails"), Settings.link_erb.rails %>
+  <%= t ".footer" %>
+</p>
