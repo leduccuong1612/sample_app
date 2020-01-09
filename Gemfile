@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+git_source(:github){|repo| "https://github.com/#{repo}.git"}
 
 ruby "2.6.5"
 
@@ -14,6 +14,8 @@ gem "config"
 gem "bootsnap", ">= 1.4.2", require: false
 
 group :development, :test do
+  gem "rubocop", "~> 0.74.0", require: false
+  gem "rubocop-rails", "~> 2.3.2", require: false
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
 end
 
