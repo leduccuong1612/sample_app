@@ -1,16 +1,32 @@
 en:
   layouts:
     application:
-      title: Ruby on Rails Tutorial Sample App
+      title: "Ruby on Rails Tutorial Sample App"
+    footer:
+      rails: "Ruby on Rails Tutorial"
+      author: "Michael Hartl"
+      about: "About"
+      contact: "Contact"
+      news: "News"
+    header:
+      index: "sample app"
+      home: "Home"
+      help: "Help"
+      log_in: "Log in"
+
+  users:
+    new:
+      title: "Sign up"
+      header: "Sign up"
+      infor: "This will be a signup page for new user."
 
   static_pages:
     home:
-      en: "English"
-      vi: "Vietnamese"
       header: "Sample App"
       home: "This is the home page for the"
       link_tutorial: "Ruby on Rails Tutorial sample application."
 
+      sign_up: "Sign up Now!"
     about:
       title: "About"
       header: "About"
