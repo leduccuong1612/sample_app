@@ -61,6 +61,7 @@ GEM
     ast (2.4.0)
     autoprefixer-rails (9.7.3)
       execjs
+    bcrypt (3.1.13)
     bindex (0.8.1)
     bootsnap (1.4.5)
       msgpack (~> 1.0)
@@ -82,7 +83,7 @@ GEM
     config (2.2.1)
       deep_merge (~> 1.2, >= 1.2.1)
       dry-validation (~> 1.0, >= 1.0.0)
-    crass (1.0.5)
+    crass (1.0.6)
     deep_merge (1.2.1)
     dry-configurable (0.9.0)
       concurrent-ruby (~> 1.0)
@@ -126,7 +127,7 @@ GEM
     ffi (1.11.3)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
-    i18n (1.8.1)
+    i18n (1.8.2)
       concurrent-ruby (~> 1.0)
     jaro_winkler (1.5.4)
     jbuilder (2.9.1)
@@ -265,6 +266,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt (= 3.1.13)
   bootsnap (>= 1.4.2)
   bootstrap-sass (= 3.4.1)
   byebug

@@ -3,9 +3,9 @@
 <h1><%= t ".header" %></h1>
 <p>
   <%= t ".help_rails" %>
-  <%= link_to t(".link_help"), Settings.link_erb.help %>
+  <%= link_to t(".link_help"), Settings.link.help %>
   <%= t ".help_app" %>
-  <%= link_to  Settings.link_erb.book do %>
+  <%= link_to Settings.link.book do %>
     <em><%= t ".link_rails" %></em>
     <%= t ".link_book" %>
   <% end %>

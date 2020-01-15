@@ -1,13 +1,14 @@
 <footer class="footer">
   <small>
-    The <%= link_to t(".rails"), Settings.link_erb.main %>
-    by <%= link_to t(".author"), Settings.link_erb.author %>
+    <%= link_to t(".rails"), Settings.link.main %>
+    <%= t ".by" %>
+    <%= link_to t(".author"), Settings.link.author %>
   </small>
   <nav>
     <ul>
       <li><%= link_to t(".about"), about_path %></li>
       <li><%= link_to t(".contact"), contact_path %></li>
-      <li><%= link_to t(".news"), Settings.link_erb.main %></li>
+      <li><%= link_to t(".news"), Settings.link.main %></li>
     </ul>
   </nav>
 </footer>
