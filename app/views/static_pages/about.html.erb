@@ -3,16 +3,16 @@
 <h1><%= t ".header" %></h1>
 <p>
   <%= t ".open" %>
-  <%= link_to Settings.link_erb.main do %>
+  <%= link_to Settings.link.main do %>
     <em><%= t ".link_rails" %></em>
   <% end %>
   <%= t ".part" %>
-  <%= link_to t(".link_learn"), Settings.link_erb.learnenough %>
+  <%= link_to t(".link_learn"), Settings.link.learnenough %>
   <%= t ".family" %>
-  <%= link_to t(".book"), Settings.link_erb.book %>
+  <%= link_to t(".book"), Settings.link.book %>
   <%= t ".and" %>
-  <%= link_to t(".link_screencast"), Settings.link_erb.screencast %>
+  <%= link_to t(".link_screencast"), Settings.link.screencast %>
   <%= t ".teach" %>
-  <%= link_to t(".rails"), Settings.link_erb.rails %>
+  <%= link_to t(".rails"), Settings.link.rails %>
   <%= t ".footer" %>
 </p>

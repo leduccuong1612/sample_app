@@ -1,10 +1,6 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
-
-$light-gray: #777;
-$gray-medium-light: #eaeaea;
-$gray: #555;
-$gray-darker: #222;
+@import 'color';
 /* universal */
 
 body {
