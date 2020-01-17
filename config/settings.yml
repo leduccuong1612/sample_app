@@ -11,4 +11,6 @@ validate:
   name_length: 50
   email_length: 255
   password_min_length: 6
-  regex_email: //\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i/
+  regex_email: !ruby/regexp /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+helper:
+  size_gravatar: 80
