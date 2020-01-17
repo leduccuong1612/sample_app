@@ -13,21 +13,86 @@ en:
       index: "sample app"
       home: "Home"
       help: "Help"
+      users: "Users"
+      account: "Account"
       log_in: "Log in"
+      log_out: "Log out"
+      profile: "Profile"
+      settings: "Settings"
+  shared:
+    error_messages:
+      contain: "The form contains"
+      error: "errors"
+
+  sessions:
+    new:
+      title: "Log in"
+      header: "Log in"
+      email: "email"
+      password: "password"
+      login: "Login"
+      sign_up: "Sign up now!"
+      new_user: "New User?"
+      remember: "Remember me on this computer"
+    create:
+      warning: "Invalid email/password combination"
 
   users:
+    index:
+      title: All Users
+      header: "All users"
+
+    user:
+      delete: "Delete"
+      confirm: "You Sure?"
+
     new:
       title: "Sign up"
       header: "Sign up"
-      infor: "This will be a signup page for new user."
+      name: "name"
+      account: "Create my account"
+      name: "name"
+      email: "email"
+      password: "password"
+      password_confirmation: "password_confirmation"
+      confirm: "Confirmation"
+
+    edit:
+      title: "Edit user"
+      header: "Update your profile"
+      change: Change Avatar
+      name: "name"
+      email: "email"
+      password: "password"
+      password_confirmation: "password_confirmation"
+      save: "Save Change"
+      danger: "Not found id to edit"
+
+    create:
+      success: "Welcome to the Sample App!"
+      danger: "Error !!!"
+
+    update:
+      success: "Profile updated"
+      danger: "Update failed successfully"
+
+    destroy:
+      success: "User deleted"
+      danger: "Not found id to delete"
+
+    logged_in_user:
+      danger: "Please log in."
+
+    load_user:
+      danger: "Not found"
 
   static_pages:
     home:
       header: "Sample App"
       home: "This is the home page for the"
       link_tutorial: "Ruby on Rails Tutorial sample application."
-
       sign_up: "Sign up Now!"
+
     about:
       title: "About"
       header: "About"
