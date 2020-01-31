@@ -6,10 +6,13 @@ class UsersController < ApplicationController
   def create
     @user = User.new user_params
     if @user.save
-      flash[:success] = t ".success"
+      log_in @user
+      flash.now[:success] = t ".success"
+      log_in @user
       redirect_to @user
+
     else
-      flash[:danger] = t ".error"
+      flash.now[:danger] = t ".error"
       render :new
     end
   end

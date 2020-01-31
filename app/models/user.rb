@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  attr_accessor :remember_token
   USER_PARAMS = %i(name email password password_confirmation).freeze
 
   before_save{self.email = email.downcase}
@@ -10,6 +11,16 @@ class User < ApplicationRecord
     uniqueness: {case_sensitive: true}
   validates :password, presence: true,
     length: {minimum: Settings.validate.password_min_length}
-
   has_secure_password
+
+  class << self
+    def diggest string
+      if cost = ActiveModel::SecurePassword.min_cost
+        BCrypt::Engine::MIN_COST
+      else
+        BCrypt::Engine.cost
+        BCrypt::Password.create string, cost: cost
+      end
+    end
+  end
 end

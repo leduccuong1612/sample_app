@@ -13,7 +13,29 @@ en:
       index: "sample app"
       home: "Home"
       help: "Help"
+      users: "Users"
+      account: "Account"
       log_in: "Log in"
+      log_out: "Log out"
+      profile: "Profile"
+      settings: "Settings"
+  shared:
+    error_messages:
+      contain: "The form contains"
+      error: "errors"
+
+  sessions:
+    new:
+      title: "Log in"
+      header: "Log in"
+      email: "email"
+      password: "password"
+      login: "Login"
+      sign_up: "Sign up now!"
+      new_user: "New User?"
+
+    create:
+      warning: "Invalid email/password combination"
 
   users:
     new:
@@ -67,8 +89,3 @@ en:
       header: "Contact"
       contact: "Contact the Ruby on Rails Tutorial about the sample app at the"
       link_contact: " contact page."
-
-  shared:
-    error_messages:
-      contain: "The form contains"
-      error: "errors"
