@@ -33,7 +33,7 @@ en:
       login: "Login"
       sign_up: "Sign up now!"
       new_user: "New User?"
-
+      remember: "Remember me on this computer"
     create:
       warning: "Invalid email/password combination"
 
@@ -60,6 +60,7 @@ en:
       link_tutorial: "Ruby on Rails Tutorial sample application."
       sign_up: "Sign up Now!"
 
+      sign_up: "Sign up Now!"
     about:
       title: "About"
       header: "About"
