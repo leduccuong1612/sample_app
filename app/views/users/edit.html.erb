@@ -14,10 +14,15 @@
       <%= f.label t(".password") %>
       <%= f.password_field t(".password"), class: "form-control" %>
 
-      <%= f.label t("password_confirmation"), t(".confirm") %>
-      <%= f.password_field t("password_confirmation"), class: "form-control" %>
+      <%= f.label t(".password_confirmation") %>
+      <%= f.password_field t(".password_confirmation"), class: "form-control" %>
 
-      <%= f.submit t(".account"), class: "btn btn-primary" %>
+      <%= f.submit t(".save"), class: "btn btn-primary" %>
     <% end %>
+
+    <div class="gravatar_edit">
+      <%= gravatar_for @user %>
+      <%= link_to t(".change"), Settings.link.gravatar %>
+    </div>
   </div>
 </div>
