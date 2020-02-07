@@ -93,6 +93,7 @@ en:
       link_tutorial: "Ruby on Rails Tutorial sample application."
       sign_up: "Sign up Now!"
 
+      sign_up: "Sign up Now!"
     about:
       title: "About"
       header: "About"
