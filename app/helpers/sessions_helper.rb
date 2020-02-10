@@ -15,7 +15,7 @@ module SessionsHelper
     end
   end
 
-  def logger_in?
+  def logged_in?
     current_user.present?
   end
 

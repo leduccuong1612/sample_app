@@ -14,4 +14,6 @@ validate:
   regex_email: !ruby/regexp /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 helper:
   size_gravatar: 80
-remember_status: 1
+  remember_status: 1
+paginate:
+  length: 5
