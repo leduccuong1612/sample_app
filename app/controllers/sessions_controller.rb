@@ -4,13 +4,18 @@ class SessionsController < ApplicationController
   def create
     user = User.find_by email: params[:session][:email].downcase
     if user&.authenticate(params[:session][:password])
-      log_in user
-      if params[:session][:remember_me] == Settings.remember_me_status
-        remember user
+      if user.activated?
+        log_in user
+        if params[:session][:remember_me] == Settings.remember_me_status
+          remember user
+        else
+          forget user
+        end
+        redirect_back_or user
       else
-        forget user
+        flash[:warning] = t ".notification"
+        redirect_to root_path
       end
-      redirect_to user
     else
       flash.now[:danger] = t ".warning"
       render :new
@@ -19,6 +24,6 @@ class SessionsController < ApplicationController
 
   def destroy
     log_out if logged_in?
-    redirect_to root_url
+    redirect_to root_path
   end
 end
