@@ -6,6 +6,8 @@ gem "bcrypt", "3.1.13"
 gem "bootsnap", ">= 1.4.2", require: false
 gem "bootstrap-sass", "3.4.1"
 gem "config"
+gem "kaminari"
+gem "faker", "1.7.3"
 gem "jbuilder", "~> 2.7"
 gem "mysql2"
 gem "puma", "~> 4.1"

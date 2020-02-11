@@ -11,9 +11,9 @@ class User < ApplicationRecord
     format: {with: Settings.validate.regex_email},
     uniqueness: {case_sensitive: true}
   validates :password, presence: true,
-    length: {minimum: Settings.validate.password_min_length}
+    length: {minimum: Settings.validate.password_min_length},
+    allow_nil: true
   has_secure_password
-
   class << self
     def digest string
       if ActiveModel::SecurePassword.min_cost
@@ -27,6 +27,20 @@ class User < ApplicationRecord
     def new_token
       SecureRandom.urlsafe_base64
     end
+  end
+
+  def remember
+    self.remember_token = User.new_token
+    update_attributes remember_digest: User.digest(remember_token)
+  end
+
+  def authenticated? remember_token
+    return unless remember_digest
+    BCrypt::Password.new(remember_digest).is_password? remember_token
+  end
+
+  def forget
+    update_attributes remember_digest: nil
   end
 
   def remember
