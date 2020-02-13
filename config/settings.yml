@@ -31,3 +31,4 @@ development:
 mailer:
   layout: "mailer"
   default: "noreply@example.com"
+expire: 2

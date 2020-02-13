@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   USER_PARAMS = %i(name email password password_confirmation).freeze
-  attr_accessor :remember_token, :activation_token
+  attr_accessor :remember_token, :activation_token, :reset_token
   before_save :downcase_email
   before_create :create_activation_digest
 
@@ -11,9 +11,9 @@ class User < ApplicationRecord
     format: {with: Settings.validate.regex_email},
     uniqueness: {case_sensitive: true}
   validates :password, presence: true,
-    length: {minimum: Settings.validate.password_min_length},
-    allow_nil: true
+    length: {minimum: Settings.validate.password_min_length}, allow_nil: true
   has_secure_password
+
   class << self
     def digest string
       if ActiveModel::SecurePassword.min_cost
@@ -52,10 +52,23 @@ class User < ApplicationRecord
     UserMailer.account_activation(self).deliver_now
   end
 
+  def create_reset_digest
+    self.reset_token = User.new_token
+    update_attributes reset_digest: User.digest(reset_token), reset_sent_at: Time.zone.now
+  end
+
+  def send_password_reset_email
+    UserMailer.password_reset(self).deliver_now
+  end
+
+  def password_reset_expired?
+    reset_sent_at < Settings.expire.hours.ago
+  end
+
   private
 
   def downcase_email
-    self.email.downcase!
+    email.downcase!
   end
 
   def create_activation_digest
