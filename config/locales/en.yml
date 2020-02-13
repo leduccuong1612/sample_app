@@ -19,6 +19,7 @@ en:
       log_out: "Log out"
       profile: "Profile"
       settings: "Settings"
+
   shared:
     error_messages:
       contain: "The form contains"
@@ -36,11 +37,19 @@ en:
       remember: "Remember me on this computer"
     create:
       warning: "Invalid email/password combination"
-
+      notification: "Account not activated.Check your email for the activation link."
   users:
+    form:
+      name: "name"
+      email: "email"
+      password: "password"
+      password_confirmation: "password_confirmation"
+      save: "Save User"
+
     index:
       title: All Users
       header: "All users"
+      danger: "Please log in."
 
     user:
       delete: "Delete"
@@ -49,27 +58,15 @@ en:
     new:
       title: "Sign up"
       header: "Sign up"
-      name: "name"
-      account: "Create my account"
-      name: "name"
-      email: "email"
-      password: "password"
-      password_confirmation: "password_confirmation"
-      confirm: "Confirmation"
 
     edit:
       title: "Edit user"
       header: "Update your profile"
       change: Change Avatar
-      name: "name"
-      email: "email"
-      password: "password"
-      password_confirmation: "password_confirmation"
-      save: "Save Change"
       danger: "Not found id to edit"
 
     create:
-      success: "Welcome to the Sample App!"
+      notification: "Please check your email to activate your account."
       danger: "Error !!!"
 
     update:
@@ -92,8 +89,8 @@ en:
       home: "This is the home page for the"
       link_tutorial: "Ruby on Rails Tutorial sample application."
       sign_up: "Sign up Now!"
+      fail_active:
 
-      sign_up: "Sign up Now!"
     about:
       title: "About"
       header: "About"
@@ -123,3 +120,14 @@ en:
       header: "Contact"
       contact: "Contact the Ruby on Rails Tutorial about the sample app at the"
       link_contact: " contact page."
+
+  user_mailer:
+    account_activation:
+      intro: "Welcome to the Sample App! Click on the link below to activate your account:"
+      subject: "Account Activation"
+      active: "Activate link"
+
+  account_activations:
+    edit:
+      account_active: "account activated!"
+      fail_active: "Invalid activation link"
