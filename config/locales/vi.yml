@@ -2,7 +2,6 @@ vi:
   layouts:
     application:
       title: Ruby on Rails Tutorial Sample App
-
   static_pages:
     home:
       en: "Tiếng Anh"
