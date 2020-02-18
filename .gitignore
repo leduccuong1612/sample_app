@@ -17,14 +17,14 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
-
+/javascript/packs/i18n
 # Ignore uploaded files in development.
 /storage/*
 !/storage/.keep
 
 /public/assets
 .byebug_history
-
+/public/upload
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
@@ -41,3 +41,5 @@ yarn-debug.log*
 config/settings.local.yml
 config/settings/*.local.yml
 config/environments/*.local.yml
+app/javascript/packs/i18n/
+public/uploads/
