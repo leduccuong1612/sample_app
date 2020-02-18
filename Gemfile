@@ -6,7 +6,7 @@ gem "active_storage_validations", "0.8.2"
 gem "bcrypt", "3.1.13"
 gem "bootsnap", ">= 1.4.2", require: false
 gem "bootstrap-sass", "3.4.1"
-gem "bootstrap-will_paginate", "1.0.0"
+gem "bootstrap-kaminari-views"
 gem "carrierwave", "1.2.2"
 gem "config"
 gem "faker", "1.7.3"
@@ -21,7 +21,6 @@ gem "mini_magick", "4.9.5"
 gem "sass-rails", ">= 6"
 gem "turbolinks", "~> 5"
 gem "webpacker", "~> 4.0"
-gem "will_paginate", "3.1.7"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]

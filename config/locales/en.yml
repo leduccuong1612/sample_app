@@ -30,6 +30,9 @@ en:
     user_info:
       view_profile: "view my profile"
       post: "micropost"
+    stats:
+      following: following
+      followers: followers
   sessions:
     new:
       title: "Log in"
@@ -68,6 +71,12 @@ en:
       header: "Update your profile"
       change: Change Avatar
       danger: "Not found id to edit"
+    show_follow:
+      post: "Micropost"
+    unfollow:
+      unfollow: "Unfollow"
+    follow:
+      follow: "Follow"
     create:
       notification: "Please check your email to activate your account."
       danger: "Error !!!"
@@ -81,6 +90,10 @@ en:
       danger: "Please log in."
     load_user:
       danger: "Not found"
+    following:
+      following: "Following"
+    followers:
+      followers: "Followers"
   static_pages:
     home:
       header: "Sample App"
