@@ -1,7 +1,10 @@
 en:
+  alert: "Maximum file size is 5MB. Please choose a smaller file."
+
   layouts:
     application:
       title: "Ruby on Rails Tutorial Sample App"
+
     footer:
       rails: "The Ruby on Rails Tutorial"
       by: "by"
@@ -9,6 +12,7 @@ en:
       about: "About"
       contact: "Contact"
       news: "News"
+
     header:
       index: "sample app"
       home: "Home"
@@ -24,6 +28,14 @@ en:
     error_messages:
       contain: "The form contains"
       error: "errors"
+
+    micropost_form:
+      content: "Compose new micropost..."
+      submit: "Post"
+
+    user_info:
+      view_profile: "view my profile"
+      post: "micropost"
 
   sessions:
     new:
@@ -48,6 +60,8 @@ en:
       password_confirmation: "password_confirmation"
       save: "Save User"
 
+    show:
+      post: "Microposts: "
     index:
       title: All Users
       header: "All users"
@@ -91,7 +105,7 @@ en:
       home: "This is the home page for the"
       link_tutorial: "Ruby on Rails Tutorial sample application."
       sign_up: "Sign up Now!"
-      fail_active:
+      feed_title: "Micropost Feed"
 
     about:
       title: "About"
@@ -165,3 +179,15 @@ en:
 
     check_expiration:
       danger: "Password reset has expired."
+
+  microposts:
+    micropost:
+      ago: " ago."
+      confirm: "You sure?"
+    destroy:
+      success: "Micropost deleted"
+      danger: "Micropost not deleted"
+
+    create:
+      success: "Micropost created!"
+      danger: "Micropost not created!"

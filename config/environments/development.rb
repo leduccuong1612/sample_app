@@ -74,4 +74,5 @@ Rails.application.configure do
     authentication: Settings.development.authentication,
     enable_starttls_auto: Settings.development.enable_starttls_auto
   }
+  config.middleware.use I18n::JS::Middleware
 end
