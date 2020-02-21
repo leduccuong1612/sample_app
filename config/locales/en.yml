@@ -158,6 +158,9 @@ en:
     destroy:
       success: "Micropost deleted"
       danger: "Micropost not deleted"
+    destroy:
+      success: "Micropost deleted"
+      danger: "Micropost not deleted"
     create:
       success: "Micropost created!"
       danger: "Micropost not created!"

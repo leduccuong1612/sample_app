@@ -1,8 +1,12 @@
 class User < ApplicationRecord
+
   USER_PARAMS = %i(name email password password_confirmation).freeze
+
   attr_accessor :remember_token, :activation_token, :reset_token
-  before_save :downcase_email
-  before_create :create_activation_digest
+
+  has_many :microposts, dependent: :destroy
+
+  scope :not_admin, ->{where(admin: false)}
 
   validates :name, presence: true,
     length: {maximum: Settings.validate.name_length}
@@ -12,6 +16,10 @@ class User < ApplicationRecord
     uniqueness: {case_sensitive: true}
   validates :password, presence: true,
     length: {minimum: Settings.validate.password_min_length}, allow_nil: true
+
+  before_save :downcase_email
+  before_create :create_activation_digest
+
   has_secure_password
 
   class << self
@@ -63,6 +71,10 @@ class User < ApplicationRecord
 
   def password_reset_expired?
     reset_sent_at < Settings.expire.hours.ago
+  end
+
+  def feed
+    Micropost.order_desc.not_admin
   end
 
   private

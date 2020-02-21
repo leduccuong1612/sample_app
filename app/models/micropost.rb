@@ -6,7 +6,7 @@ class Micropost < ApplicationRecord
   has_one_attached :image
 
   scope :order_desc, ->{order created_at: :desc}
-  scope :find_user, ->user {where user_id: user}
+  scope :not_admin, ->{joins(:user).merge(User.not_admin)}
 
   validates :user_id, presence: true
   validates :content, presence: true,

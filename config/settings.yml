@@ -41,3 +41,4 @@ limit:
   variant: 500
   upload: 400
 size: 1048576
+per_page: 5
