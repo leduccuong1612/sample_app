@@ -9,15 +9,19 @@ link:
   author: "https//www.michaelhartl.com"
   gravatar: "http://gravatar.com/emails"
 validate:
+  content_length: 140
   name_length: 50
   email_length: 255
   password_min_length: 6
   regex_email: !ruby/regexp /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  must_image: "must be a valid image format"
+  small_pic: "should be less than 5Mb"
+  type: ["image/jpeg", "image/gif", "image/png"]
+  format: ["jpg", "jpeg", "gif", "png"]
 helper:
   size_gravatar: 80
   remember_status: 1
 controller:
-  paginate_length: 5
   size_gravatar_user: 50
 development:
   host: "localhost:3000"
@@ -32,3 +36,8 @@ mailer:
   layout: "mailer"
   default: "noreply@example.com"
 expire: 2
+limit:
+  megabyte: 5
+  variant: 500
+  upload: 400
+size: 1048576
