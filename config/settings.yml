@@ -9,6 +9,7 @@ link:
   author: "https//www.michaelhartl.com"
   gravatar: "http://gravatar.com/emails"
 validate:
+  gravatar_user: 30
   content_length: 140
   name_length: 50
   email_length: 255
